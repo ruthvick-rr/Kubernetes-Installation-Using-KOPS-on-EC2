@@ -3,6 +3,8 @@ Kubernetes Installation on AWS EC2 using kops — Step-by-Step Guide
 
 
 1. Install Prerequisites Locally
+
+   
 Install AWS CLI:
 
 
@@ -14,6 +16,8 @@ aws --version
 
 
 Install kubectl:
+
+
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
 
@@ -31,8 +35,14 @@ Install kops:
 
 
 curl -Lo kops https://github.com/kubernetes/kops/releases/latest/download/kops-linux-amd64
+
+
 chmod +x kops
+
+
 sudo mv kops /usr/local/bin/
+
+
 kops version
 
 Provide the below permissions to your IAM user. If you are using the admin user, the below permissions are available by default
