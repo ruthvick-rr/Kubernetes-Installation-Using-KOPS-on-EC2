@@ -83,7 +83,13 @@ Enter your Access Key, Secret Key, Region (e.g., us-east-2 for Ohio), and output
 Step 4: Create an S3 Bucket for kops State Storage
 
 aws s3api create-bucket --bucket kops-ruthvick-storage --region us-east-2 --create-bucket-configuration LocationConstraint=us-east-2
+
+
 (Use a unique bucket name — bucket names are globally unique.)
+
+Verify Bucket creation using  : aws s3 ls
+
+
 
 Step 5: Set Environment Variables
 
