@@ -8,7 +8,21 @@ Step 1: Install Prerequisites Locally
 Install AWS CLI:
 
 
-sudo apt-get update && sudo apt-get install -y awscli
+sudo apt-get update && sudo apt-get install -y awscli(If it says E: Package 'awscli' has no installation candidate)
+
+
+Try Using:
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+
+unzip awscliv2.zip
+
+
+sudo ./aws/install
+
+
+aws --version
 
 
 aws --version
