@@ -77,11 +77,11 @@ Create the cluster
 export NAME=cluster.k8s.example.com
 
 
-export KOPS_STATE_STORE=s3://my-kops-state-store-unique-name
+export KOPS_STATE_STORE=s3://kops-ruthvick-storage
 
 kops create cluster \
   --name=demok8sruthvickcluster.k8s.local \
-  --state=s3://my-kops-state-store-ruthvick-12345 \
+  --state=s3://kops-ruthvick-storage \
   --zones=us-east-2a,us-east-2b,us-east-2c \
   --node-count=3 \
   --node-size=t2.micro \
@@ -99,11 +99,11 @@ kops edit cluster demoK8sruthvickcluster.k8s.local
 
 Step 12: Build the cluster
 
-kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-abhi-storage
+kops update cluster demok8sruthvickcluster.k8s.local --yes --state=s3://kops-ruthvick-storage
 
 
 This will take a few minutes to create............
 
 After a few mins, run the below command to verify the cluster installation.
 
-kops validate cluster demok8scluster.k8s.local
+kops validate cluster demok8sruthvickcluster.k8s.local
