@@ -68,18 +68,33 @@ Run aws configure
 Create an S3 Bucket for kops State Storage
 
 
-aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
+aws s3api create-bucket --bucket kops-ruthvick-storage --region us-east-1 (Use Unique Name for Bucket Creation)
 
 
 Create the cluster
 
 
-kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  --master-volume-size=8 --node-volume-size=8
+export NAME=cluster.k8s.example.com
+
+
+export KOPS_STATE_STORE=s3://my-kops-state-store-unique-name
+
+kops create cluster \
+  --name=demok8sruthvickcluster.k8s.local \
+  --state=s3://my-kops-state-store-ruthvick-12345 \
+  --zones=us-east-2a,us-east-2b,us-east-2c \
+  --node-count=3 \
+  --node-size=t2.micro \
+  --control-plane-size=t2.micro \
+  --master-volume-size=8 \
+  --node-volume-size=8 \
+  --dns private
+  
 
 Important: Edit the configuration as there are multiple resources created which won't fall into the free tier.
 
 
-kops edit cluster myfirstcluster.k8s.local
+kops edit cluster demoK8sruthvickcluster.k8s.local
 
 
 Step 12: Build the cluster
