@@ -46,15 +46,27 @@ sudo mv kops /usr/local/bin/
 kops version
 
 Provide the below permissions to your IAM user. If you are using the admin user, the below permissions are available by default
+
+
 AmazonEC2FullAccess
+
+
 AmazonS3FullAccess
+
+
 IAMFullAccess
+
+
 AmazonVPCFullAccess
 
 Set up AWS CLI configuration on your EC2 Instance or Laptop.
+
+
 Run aws configure
 
 Create the cluster
+
+
 kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  --master-volume-size=8 --node-volume-size=8
 Important: Edit the configuration as there are multiple resources created which won't fall into the free tier.
 kops edit cluster myfirstcluster.k8s.local
