@@ -1,5 +1,7 @@
 # Kubernetes-Installation-Using-KOPS-on-EC2
 Kubernetes Installation on AWS EC2 using kops — Step-by-Step Guide
+
+
 1. Install Prerequisites Locally
 Install AWS CLI:
 sudo apt-get update && sudo apt-get install -y awscli
