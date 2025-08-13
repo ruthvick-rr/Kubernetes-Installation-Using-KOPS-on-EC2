@@ -27,7 +27,7 @@ sudo ./aws/install
 aws --version
 
 
-aws --version
+
 
 
 Install kubectl:
