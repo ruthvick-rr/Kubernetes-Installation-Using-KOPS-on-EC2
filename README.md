@@ -25,6 +25,8 @@ sudo mv kubectl /usr/local/bin/
 
 kubectl version --client
 
+
+
 Install kops:
 curl -Lo kops https://github.com/kubernetes/kops/releases/latest/download/kops-linux-amd64
 chmod +x kops
